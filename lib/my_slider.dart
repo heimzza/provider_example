@@ -8,14 +8,6 @@ class MySlider extends StatefulWidget {
 }
 
 class _MySliderState extends State<MySlider> {
-  var _value = 0.5;
-
-  void _onValueChanged(double value) {
-    setState(() {
-      _value = value;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final schedule = Provider.of<MySchedule>(context);

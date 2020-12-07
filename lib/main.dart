@@ -28,8 +28,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      builder: (context) => MySchedule(),
-          child: Scaffold(
+      //builder: (context) => MySchedule(),
+      create: (BuildContext context) {return MySchedule();},
+      child: Scaffold(
         appBar: AppBar(
           title: Text('Time spent'),
           leading: Icon(Icons.menu),
