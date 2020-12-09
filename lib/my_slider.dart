@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_example/my_schedule.dart';
@@ -13,6 +15,8 @@ class _MySliderState extends State<MySlider> {
     final schedule = Provider.of<MySchedule>(context);
     return Slider(
       value: schedule.stateManagementTime,
+      min: - pi,
+      max: pi,
       onChanged: (value) => schedule.stateManagementTime = value,
     );
   }
