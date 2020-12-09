@@ -21,13 +21,18 @@ class MyChart extends StatelessWidget {
                 color: Colors.black,
               ),
               padding: const EdgeInsets.all(8.0),
+              child: Text(
+                double.parse(schedule.stateManagementTime.toStringAsFixed(2))
+                    .toString(),
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             Positioned(
               top: 50,
               left: 50,
               //child: FlutterLogo(),
               child: Transform.rotate(
-                angle: schedule.stateManagementTime*5,
+                angle: schedule.stateManagementTime * 5,
                 child: Stack(
                   children: [
                     Container(
