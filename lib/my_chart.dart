@@ -13,7 +13,9 @@ class MyChart extends StatelessWidget {
           alignment: Alignment.center,
           children: [
             Container(
-              margin: EdgeInsets.all(80.0),
+              width: 50,
+              height: 50,
+              margin: EdgeInsets.all(50),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.black,
@@ -24,11 +26,25 @@ class MyChart extends StatelessWidget {
               top: 50,
               left: 50,
               //child: FlutterLogo(),
-              child: Container(
-                width: 20,
-                height: 20,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Colors.yellow[800]),
+              child: Transform.rotate(
+                angle: schedule.stateManagementTime*5,
+                child: Stack(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(20),
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.yellow[900]),
+                    ),
+                    Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.blue[800]),
+                    ),
+                  ],
+                ),
               ),
             ),
             Positioned(
@@ -38,7 +54,7 @@ class MyChart extends StatelessWidget {
                 width: 20,
                 height: 20,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: Colors.yellow[800]),
+                    shape: BoxShape.circle, color: Colors.blue[800]),
               ),
             ),
           ],
